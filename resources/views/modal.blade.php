@@ -80,13 +80,13 @@
                     <div class="row form-group">
                         <div class="col-sm-6">
                             <label for="Ingredients-qty">Quantity(Item stocks)</label>
-                            <input type="text" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" id="Ingredients-qty" class="form-control form-control-sm col-md-12" name="Ingredients-qty">
+                            <input type="text" id="Ingredients-qty" class="form-control form-control-sm col-md-12" name="Ingredients-qty">
                         </div>
                         <div class="col-sm-6">
                             <label for="stocktype">Type of Stock</label>
-                            <select name="stocktype" class="form-control form-control-sm">                    
-                                <option value="pcs">pecies</option>
-                                <option value="pcs">kilogram</option>                    
+                            <select name="stocktype" id="stocktype" class="form-control form-control-sm">                    
+                                <option value="1">pecies</option>
+                                <option value="2">kilogram</option>                    
                             </select>
                         </div>            
                     </div>

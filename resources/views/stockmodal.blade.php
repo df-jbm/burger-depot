@@ -43,7 +43,7 @@
             <div class="modal-footer">
                 <div class="btn-group" id="stockbtns">
                     <label>Quantity:</label>
-                    <input type="text" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" id="stockQty" class="form-control form-control-sm" placeholder="">
+                    <input type="text" id="stockQty" class="form-control form-control-sm" placeholder="">
                     <select class="form-control" id="deliverystatus">
                       <option value="0">Delivery Type</option>
                       <option value="1">Delivery in</option>

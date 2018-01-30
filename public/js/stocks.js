@@ -149,14 +149,7 @@ $(document).ready(function(){
 					output += '</tbody>'
 					output += '</table>'
 				$('#salesinventory').html(output)
-				$('#tb-salesinventory').DataTable({
-                    dom: 'ft',
-                    scrollY: 400,
-                    scrollCollapse: true,
-                    responsive: true,
-                    paging : false,
-                    ordering : false,
-                });
+				
 			}
 		})
 	}
@@ -179,7 +172,17 @@ $(document).ready(function(){
 				for(var i in data){
 					output += '<tr>'
 					output += '<td>'+data[i].item_name+'</td>'
-					output += '<td>'+data[i].quantity+'</td>'
+					if(data[i].stocktype == 'pecies'){
+						output += '<td>'+data[i].quantity + ' pcs</td>'
+					}else{
+						if(data[i].quantity >= 1000){
+							var qnum = Number(data[i].quantity / 1000)
+							output += '<td>'+qnum + ' kg</td>'
+						}else{
+							var qnum = Number(data[i].quantity)
+							output += '<td>'+qnum + ' grams</td>'
+						}
+					}					
 					output += '<td>'+data[i].currentstock+'</td>'
 					output += '<td>'+data[i].datedelivery+'</td>'
 					output += '<td>'+data[i].type+'</td>'
@@ -199,7 +202,7 @@ $(document).ready(function(){
 			}
 		})
 	}
-	function updateStocks(stocks,action,btn,deliverystatus){		
+	function updateStocks(stocks,action,btn,deliverystatus){				
 		$.ajax({
 			url : window.location.href + '/updateStocks',
 			type : 'POST',

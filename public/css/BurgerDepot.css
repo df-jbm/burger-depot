@@ -1,5 +1,6 @@
 html,body{
 	height: 100%;
+	overflow: hidden;
 }
 body{
 	padding: 55px 0 0 0;
@@ -19,6 +20,7 @@ button{
 }
 .container #main-row, .container-fluid #main-row{	
 	height: 100%;
+	padding: 15px 100px 15px 100px;
 }
 .container #main-row #main-card, .container-fluid #main-row #main-card{
 	padding: 10px 10px 0 10px;	
@@ -65,7 +67,7 @@ button{
 	float: right;
 }
 #ingredientList{
-	font-size: 12px;
+	font-size: 18px;
 	vertical-align: middle;
 }
 #ingredientList td{

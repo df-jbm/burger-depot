@@ -65,7 +65,7 @@
         </div>
     </nav>
 
-    <div class="container" id="main">
+    <div class="container-fluid" id="main">
         <div class="row" id="main-row">
             <div class="col-sm-12 card" id="main-card">
                 <div class="col-sm-12" id="Burger-Panel">
